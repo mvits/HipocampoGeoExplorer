@@ -65,11 +65,18 @@
             map: {
                 projection: "EPSG:102113",
                 layers: [{
-                    source: "mapquest",
-                    title: "MapQuest OpenStreetMap",
-                    name: "osm",
+                    source: "google",
+                    title: "Terreno GoogleMaps",
+                    name: "TERRAIN",
                     group: "background"
-                }, {
+                },
+                 {
+                    source: "google",
+                    title: "Hybrid GoogleMaps",
+                    name: "HYBRID",
+                    group: "background"
+                },
+                 {
                     source: "ol",
                     group: "background",
                     fixed: true,
