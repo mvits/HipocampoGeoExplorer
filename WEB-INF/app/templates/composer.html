@@ -15,11 +15,11 @@
             GeoExt.Lang.set(OpenLayers.Util.getParameters()["locale"] || GeoExt.Lang.locale);
         }
         var app = new GeoExplorer.Composer({
-            authStatus: {{status}},
+            authStatus: 401,
             proxy: "../proxy/?url=",
             printService: "/geoserver/pdf/",
             about: {
-                title: "GeoExplorer Demo Map",
+                title: "GeoExplorer eliana",
                 "abstract": "This is a demonstration of GeoExplorer, an " +
                     "application for assembling and publishing web-based maps. " +
                     "After adding layers to the map, use the 'Publish map' " +
@@ -64,18 +64,20 @@
             },
             map: {
                 projection: "EPSG:102113",
-                layers: [{
-                    source: "google",
-                    title: "Terreno GoogleMaps",
-                    name: "TERRAIN",
-                    group: "background"
-                },
-                 {
+                layers: [
+                {
                     source: "google",
                     title: "Hybrid GoogleMaps",
                     name: "HYBRID",
                     group: "background"
                 },
+                {
+                    source: "google",
+                    title: "Terreno GoogleMaps",
+                    name: "TERRAIN",
+                    group: "background"
+                },
+                 
                  {
                     source: "ol",
                     group: "background",
@@ -85,8 +87,9 @@
                         "None", {visibility: false}
                     ]
                 }],
-                center: [0, 0],
-                zoom: 2
+                center: [-48000000,800000 ],
+                zoom: 6
             }
         });
+        
     </script>
