@@ -37,7 +37,9 @@ body {
 }
 
 .x-btn .icon-geoexplorer {
-    background-image: url(img/geoexplorer.png);
+    background-image: url(img/logo_geoexplorer.png);
+    background-size: cover;
+    color: rgba(240, 248, 255, 0);
 }
 
 .x-btn .icon-about {
